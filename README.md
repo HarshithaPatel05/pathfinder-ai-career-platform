@@ -42,7 +42,8 @@ context/
 The project is deployed using **Vercel**.
 
 Live URL:  
-https://career-guide-platform.vercel.app
+https://pathfinder-ai-career-platform.vercel.app
+
 
 ## 📈 Future Improvements
 
