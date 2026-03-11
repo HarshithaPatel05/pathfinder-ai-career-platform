@@ -3,7 +3,7 @@
 A web platform that helps students explore career paths, discover required skills, find scholarships, and learn about entrance exams.
 
 ## 🚀 Live Demo
-https://career-guide-platform.vercel.app
+https://pathfinder-ai-career-platform.vercel.app
 
 ## 📌 Features
 
