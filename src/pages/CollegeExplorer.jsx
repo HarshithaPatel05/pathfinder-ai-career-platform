@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { colleges } from '../data/colleges';
 import Navbar from '../components/Navbar';
-import * as LucideIcons from 'lucide-react';
+import { Search, Star, GraduationCap, MapPin, Layers, ArrowRight } from 'lucide-react';
 
 const CollegeExplorer = () => {
     const [searchTerm, setSearchTerm] = useState('');
@@ -58,7 +58,7 @@ const CollegeExplorer = () => {
                 </header>
 
                 <div className="relative mb-12">
-                    <LucideIcons.Search className="absolute left-6 top-1/2 -translate-y-1/2 text-slate-400" size={24} />
+                    <Search className="absolute left-6 top-1/2 -translate-y-1/2 text-slate-400" size={24} />
                     <input
                         type="text"
                         placeholder="Search by college name, course or city..."
@@ -87,11 +87,11 @@ const CollegeExplorer = () => {
                         <div key={college.id} className="bg-white rounded-[2.5rem] overflow-hidden shadow-sm border border-slate-100 flex flex-col hover:shadow-xl transition-all group">
                             <div className="h-40 bg-gradient-to-br from-slate-100 to-slate-200 relative">
                                 <div className="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1.5 rounded-full flex items-center gap-1.5 text-amber-500 font-bold text-sm">
-                                    <LucideIcons.Star size={16} fill="currentColor" />
+                                    <Star size={16} fill="currentColor" />
                                     {college.rating}
                                 </div>
                                 <div className="absolute -bottom-6 left-8 w-14 h-14 bg-white rounded-2xl shadow-lg flex items-center justify-center text-blue-600">
-                                    <LucideIcons.GraduationCap size={28} />
+                                    <GraduationCap size={28} />
                                 </div>
                             </div>
 
@@ -99,7 +99,7 @@ const CollegeExplorer = () => {
                                 <h3 className="text-xl font-bold text-slate-900 mb-2 leading-tight group-hover:text-blue-600 transition-colors uppercase">{college.name}</h3>
 
                                 <div className="flex items-center gap-2 text-slate-500 text-sm mb-6">
-                                    <LucideIcons.MapPin size={16} />
+                                    <MapPin size={16} />
                                     {college.location}
                                 </div>
 
@@ -119,11 +119,11 @@ const CollegeExplorer = () => {
                                         onClick={() => toggleCompare(college)}
                                         className={`flex-1 py-3 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 ${compareList.some(c => c.id === college.id) ? 'bg-indigo-50 text-indigo-700' : 'bg-slate-50 text-slate-600 hover:bg-slate-100'}`}
                                     >
-                                        <LucideIcons.Layers size={18} />
+                                        <Layers size={18} />
                                         {compareList.some(c => c.id === college.id) ? 'Added' : 'Add to Compare'}
                                     </button>
                                     <button className="w-12 h-12 bg-blue-600 hover:bg-blue-700 text-white rounded-xl flex items-center justify-center shadow-lg shadow-blue-200 transition-all">
-                                        <LucideIcons.ArrowRight size={20} />
+                                        <ArrowRight size={20} />
                                     </button>
                                 </div>
                             </div>

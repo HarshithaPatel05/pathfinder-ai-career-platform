@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
-import * as LucideIcons from 'lucide-react';
+import { Landmark, Search, Sparkles, Info, Calendar, ArrowUpRight } from 'lucide-react';
 import { exams } from '../data/exams';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -21,7 +21,7 @@ const EntranceExams = () => {
                 <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-10">
                     <div className="max-w-xl">
                         <div className="inline-flex items-center gap-2 px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-[10px] font-black uppercase tracking-widest mb-4">
-                            <LucideIcons.Landmark size={14} />
+                            <Landmark size={14} />
                             {t('entranceExams')}
                         </div>
                         <h1 className="text-4xl md:text-5xl font-black text-slate-900 leading-tight mb-6 uppercase tracking-tight">{t('examsGuidance')}</h1>
@@ -30,7 +30,7 @@ const EntranceExams = () => {
 
                     <div className="relative max-w-md w-full">
                         <div className="absolute left-6 top-1/2 -translate-y-1/2 text-slate-400">
-                            <LucideIcons.Search size={24} />
+                            <Search size={24} />
                         </div>
                         <input
                             type="text"
@@ -49,7 +49,7 @@ const EntranceExams = () => {
                         <div key={e.id} className="bg-white p-12 rounded-[2.5rem] shadow-sm border border-slate-100 hover:shadow-2xl transition-all group flex flex-col">
                             <div className="flex items-start justify-between mb-8">
                                 <div className="p-4 bg-indigo-50 text-indigo-600 rounded-2xl group-hover:bg-indigo-600 group-hover:text-white transition-all shadow-inner">
-                                    <LucideIcons.Sparkles size={28} />
+                                    <Sparkles size={28} />
                                 </div>
                                 <span className="bg-slate-50 px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest text-slate-400 border border-slate-100">Competitive Exam</span>
                             </div>
@@ -60,7 +60,7 @@ const EntranceExams = () => {
                             <div className="space-y-6 pt-8 border-t border-slate-50">
                                 <div className="p-6 bg-slate-50 rounded-2xl border border-slate-50">
                                     <h5 className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3 flex items-center gap-2">
-                                        <LucideIcons.Info size={14} className="text-indigo-600" />
+                                        <Info size={14} className="text-indigo-600" />
                                         Eligibility
                                     </h5>
                                     <p className="text-sm font-bold text-slate-700 leading-relaxed">{e.eligibility}</p>
@@ -68,14 +68,14 @@ const EntranceExams = () => {
 
                                 <div className="p-6 bg-indigo-50/50 rounded-2xl border border-indigo-50">
                                     <h5 className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3 flex items-center gap-2">
-                                        <LucideIcons.Sparkles size={14} className="text-orange-600" />
+                                        <Sparkles size={14} className="text-orange-600" />
                                         Preparation Tips
                                     </h5>
                                     <p className="text-sm font-bold text-slate-700 leading-relaxed">{e.suggestions}</p>
                                 </div>
                                 <div className="p-6 bg-slate-50 rounded-2xl border border-slate-50">
                                     <h5 className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3 flex items-center gap-2">
-                                        <LucideIcons.Calendar size={14} className="text-green-600" />
+                                        <Calendar size={14} className="text-green-600" />
                                         Important Dates
                                     </h5>
                                     <p className="text-sm font-bold text-slate-700 leading-relaxed">{e.dates}</p>
@@ -83,7 +83,7 @@ const EntranceExams = () => {
 
                                 <button className="w-full py-4 bg-white text-indigo-600 font-black rounded-2xl border-2 border-slate-50 hover:bg-indigo-600 hover:text-white transition-all flex items-center justify-center gap-2 uppercase tracking-widest text-xs">
                                     View Detailed Syllabus
-                                    <LucideIcons.ArrowUpRight size={16} />
+                                    <ArrowUpRight size={16} />
                                 </button>
                             </div>
                         </div>

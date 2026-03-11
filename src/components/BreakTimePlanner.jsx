@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import * as LucideIcons from 'lucide-react';
+import { Clock, Zap, Rocket } from 'lucide-react';
 
 const BreakTimePlanner = () => {
     const [freeDays, setFreeDays] = useState(7);
@@ -32,7 +32,7 @@ const BreakTimePlanner = () => {
             <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-6">
                 <div>
                     <h4 className="font-black text-amber-800 uppercase tracking-widest text-sm flex items-center gap-2 mb-2">
-                        <LucideIcons.Clock size={18} />
+                        <Clock size={18} />
                         Smart Break-Time Planner
                     </h4>
                     <p className="text-amber-700/70 text-sm font-bold">Turn your free days into high-value skills.</p>
@@ -55,7 +55,7 @@ const BreakTimePlanner = () => {
                 {suggestions[freeDays].map((s, idx) => (
                     <div key={idx} className="bg-white p-5 rounded-2xl border border-amber-100 hover:shadow-lg hover:-translate-y-1 transition-all group">
                         <div className="w-10 h-10 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center mb-4 group-hover:bg-amber-500 group-hover:text-white transition-all">
-                            <LucideIcons.Zap size={20} />
+                            <Zap size={20} />
                         </div>
                         <h5 className="font-bold text-slate-800 mb-1">{s.title}</h5>
                         <p className="text-xs text-slate-500 font-medium">{s.desc}</p>
@@ -64,7 +64,7 @@ const BreakTimePlanner = () => {
             </div>
 
             <button className="w-full mt-6 py-4 bg-amber-500 hover:bg-amber-600 text-white font-black rounded-2xl transition-all shadow-lg shadow-amber-200 uppercase tracking-widest text-xs flex items-center justify-center gap-2">
-                <LucideIcons.Rocket size={16} />
+                <Rocket size={16} />
                 Generate Custom Plan
             </button>
         </div>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
-import * as LucideIcons from 'lucide-react';
+import { MessageSquare, Filter, Sparkles, Plus, X, ChevronUp, ChevronDown, User, Send } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 const initialThreads = [
@@ -90,7 +90,7 @@ const DiscussionForum = () => {
                 <header className="flex flex-col md:flex-row md:items-end justify-between gap-10 mb-16 px-6">
                     <div>
                         <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-[10px] font-black uppercase tracking-widest mb-4">
-                            <LucideIcons.MessageSquare size={14} />
+                            <MessageSquare size={14} />
                             {t('communityForum')}
                         </div>
                         <h1 className="text-4xl md:text-5xl font-extrabold text-slate-800 leading-tight uppercase tracking-tight">{t('discussionForum')}</h1>
@@ -101,7 +101,7 @@ const DiscussionForum = () => {
                         onClick={() => setShowNewPost(!showNewPost)}
                         className={`flex items-center gap-3 px-10 py-5 font-extrabold rounded-[2rem] shadow-2xl transition-all transform hover:-translate-y-1 active:scale-95 text-sm uppercase tracking-widest ${showNewPost ? 'bg-slate-200 text-slate-700 shadow-slate-200' : 'bg-blue-600 hover:bg-blue-700 text-white shadow-blue-200'}`}
                     >
-                        {showNewPost ? <LucideIcons.X size={24} /> : <LucideIcons.Plus size={24} />}
+                        {showNewPost ? <X size={24} /> : <Plus size={24} />}
                         {showNewPost ? "Cancel" : "Start Discussion"}
                     </button>
                 </header>
@@ -110,7 +110,7 @@ const DiscussionForum = () => {
                     <aside className="lg:col-span-1 space-y-6">
                         <div className="bg-white p-8 rounded-[2.5rem] shadow-sm border border-slate-100">
                             <h4 className="text-xs font-bold text-slate-400 uppercase tracking-[0.2em] mb-6 flex items-center gap-2">
-                                <LucideIcons.Filter size={14} />
+                                <Filter size={14} />
                                 Categories
                             </h4>
                             <nav className="space-y-2">
@@ -121,7 +121,7 @@ const DiscussionForum = () => {
                                         className={`flex items-center justify-between p-4 rounded-2xl cursor-pointer transition-all font-bold text-xs uppercase tracking-widest ${activeCategory === cat ? 'bg-blue-600 text-white shadow-xl shadow-blue-100 translate-x-1' : 'text-slate-600 hover:bg-slate-50 hover:translate-x-1'}`}
                                     >
                                         {cat}
-                                        {activeCategory === cat && <LucideIcons.ChevronUp className="rotate-90" size={16} />}
+                                        {activeCategory === cat && <ChevronUp className="rotate-90" size={16} />}
                                     </div>
                                 ))}
                             </nav>
@@ -130,13 +130,13 @@ const DiscussionForum = () => {
                         <div className="bg-indigo-600 p-8 rounded-[2.5rem] shadow-xl shadow-indigo-100 text-white relative overflow-hidden group">
                             <div className="relative z-10">
                                 <h4 className="font-bold text-lg mb-2 flex items-center gap-2">
-                                    <LucideIcons.Sparkles size={18} />
+                                    <Sparkles size={18} />
                                     AI Top Picks
                                 </h4>
                                 <p className="text-indigo-100 text-sm leading-relaxed mb-6 italic font-medium">"Trending: Preparation for GATE 2027 is picking up pace."</p>
                                 <button className="w-full py-4 bg-white text-indigo-600 rounded-2xl font-bold text-xs uppercase tracking-widest hover:bg-slate-50 transition-all">Explore Trending</button>
                             </div>
-                            <LucideIcons.Sparkles className="absolute right-[-20px] top-[-20px] text-white opacity-10 group-hover:scale-125 transition-transform" size={150} />
+                            <Sparkles className="absolute right-[-20px] top-[-20px] text-white opacity-10 group-hover:scale-125 transition-transform" size={150} />
                         </div>
                     </aside>
 
@@ -161,15 +161,15 @@ const DiscussionForum = () => {
                         {filteredThreads.map(thread => (
                             <div key={thread.id} className="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-sm border border-slate-100 flex gap-8 items-start hover:shadow-2xl hover:shadow-indigo-900/5 transition-all group">
                                 <div className="flex flex-col items-center p-3 bg-slate-50 rounded-2xl border border-slate-100 shrink-0">
-                                    <button onClick={() => handleUpvote(thread.id)} className="text-slate-400 hover:text-blue-600 transition-colors p-1"><LucideIcons.ChevronUp size={24} /></button>
+                                    <button onClick={() => handleUpvote(thread.id)} className="text-slate-400 hover:text-blue-600 transition-colors p-1"><ChevronUp size={24} /></button>
                                     <span className="font-black text-slate-800 text-lg leading-tight my-1">{thread.upvotes}</span>
-                                    <button onClick={() => handleDownvote(thread.id)} className="text-slate-400 hover:text-red-600 transition-colors p-1"><LucideIcons.ChevronDown size={24} /></button>
+                                    <button onClick={() => handleDownvote(thread.id)} className="text-slate-400 hover:text-red-600 transition-colors p-1"><ChevronDown size={24} /></button>
                                 </div>
 
                                 <div className="flex-1">
                                     <div className="flex items-center gap-3 mb-4">
                                         <div className="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center text-slate-400 shadow-inner group-hover:bg-blue-100 group-hover:text-blue-600 transition-all">
-                                            <LucideIcons.User size={20} />
+                                            <User size={20} />
                                         </div>
                                         <div>
                                             <p className="font-extrabold text-slate-800 text-sm leading-none">{thread.author}</p>
@@ -183,11 +183,11 @@ const DiscussionForum = () => {
 
                                     <div className="flex items-center gap-6 pt-4 border-t border-slate-50">
                                         <button className="flex items-center gap-2 text-slate-400 hover:text-blue-600 font-bold text-[10px] uppercase tracking-[0.2em] transition-all">
-                                            <LucideIcons.MessageSquare size={16} />
+                                            <MessageSquare size={16} />
                                             {thread.comments} Comments
                                         </button>
                                         <button className="flex items-center gap-2 text-slate-400 hover:text-blue-600 font-bold text-[10px] uppercase tracking-[0.2em] transition-all">
-                                            <LucideIcons.Send size={16} />
+                                            <Send size={16} />
                                             Share Topic
                                         </button>
                                     </div>

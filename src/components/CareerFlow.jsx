@@ -1,20 +1,20 @@
 import React from 'react';
-import * as LucideIcons from 'lucide-react';
+import { GraduationCap, Zap, Briefcase, TrendingUp, ChevronRight } from 'lucide-react';
 
 const CareerFlow = ({ career }) => {
     if (!career) return null;
 
     const steps = [
-        { icon: <LucideIcons.GraduationCap size={20} />, label: "Education", value: career.educationPath },
-        { icon: <LucideIcons.Zap size={20} />, label: "Core Skills", value: career.skillsRequired.slice(0, 2).join(", ") },
-        { icon: <LucideIcons.Briefcase size={20} />, label: "First Job", value: career.name },
-        { icon: <LucideIcons.TrendingUp size={20} />, label: "Growth", value: "Senior Role / Management" }
+        { icon: <GraduationCap size={20} />, label: "Education", value: career.educationPath },
+        { icon: <Zap size={20} />, label: "Core Skills", value: career.skillsRequired.slice(0, 2).join(", ") },
+        { icon: <Briefcase size={20} />, label: "First Job", value: career.name },
+        { icon: <TrendingUp size={20} />, label: "Growth", value: "Senior Role / Management" }
     ];
 
     return (
         <div className="bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm overflow-hidden">
             <h3 className="text-xs font-black text-slate-400 uppercase tracking-[0.2em] mb-10 flex items-center gap-2">
-                <LucideIcons.TrendingUp size={14} className="text-blue-600" />
+                <TrendingUp size={14} className="text-blue-600" />
                 Interactive Career Path Flow
             </h3>
 
@@ -38,7 +38,7 @@ const CareerFlow = ({ career }) => {
 
                         {idx < steps.length - 1 && (
                             <div className="hidden md:block absolute right-[-20%] top-1/2 -translate-y-1/2 text-slate-200">
-                                <LucideIcons.ChevronRight size={20} />
+                                <ChevronRight size={20} />
                             </div>
                         )}
                     </div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
-import * as LucideIcons from 'lucide-react';
+import { GraduationCap, Search, Filter, Sparkles, Calendar, ExternalLink } from 'lucide-react';
 import { scholarships } from '../data/scholarships';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -40,7 +40,7 @@ const ScholarshipFinder = () => {
                 <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-10">
                     <div className="max-w-xl">
                         <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold uppercase tracking-widest mb-4">
-                            <LucideIcons.GraduationCap size={14} />
+                            <GraduationCap size={14} />
                             {t('scholarships')}
                         </div>
                         <h1 className="text-4xl md:text-5xl font-extrabold text-slate-900 leading-tight mb-6 tracking-tight uppercase">{t('scholarshipFinder')}</h1>
@@ -49,7 +49,7 @@ const ScholarshipFinder = () => {
 
                     <div className="relative max-w-md w-full">
                         <div className="absolute left-6 top-1/2 -translate-y-1/2 text-slate-400">
-                            <LucideIcons.Search size={24} />
+                            <Search size={24} />
                         </div>
                         <input
                             type="text"
@@ -65,7 +65,7 @@ const ScholarshipFinder = () => {
             <main className="max-w-7xl mx-auto p-6 py-12">
                 <div className="flex flex-col md:flex-row gap-6 mb-10 w-full justify-between items-center bg-white p-6 rounded-[2rem] border border-slate-100 shadow-sm">
                     <div className="flex items-center gap-3 overflow-x-auto scrollbar-hide flex-1">
-                        <LucideIcons.Filter className="text-slate-400 shrink-0" size={20} />
+                        <Filter className="text-slate-400 shrink-0" size={20} />
                         {categories.map(cat => (
                             <button
                                 key={cat}
@@ -103,7 +103,7 @@ const ScholarshipFinder = () => {
                         <div key={s.id} className="bg-white p-10 rounded-[2.5rem] shadow-sm border border-slate-100 hover:shadow-2xl hover:shadow-blue-900/5 transition-all group flex flex-col">
                             <div className="flex items-start justify-between mb-8">
                                 <div className="p-4 bg-blue-50 text-blue-600 rounded-2xl group-hover:bg-blue-600 group-hover:text-white transition-all">
-                                    <LucideIcons.Sparkles size={28} />
+                                    <Sparkles size={28} />
                                 </div>
                                 <div className="bg-slate-50 px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest text-slate-400 border border-slate-100">
                                     {s.category}
@@ -115,12 +115,12 @@ const ScholarshipFinder = () => {
 
                             <div className="space-y-4 pt-6 mt-auto border-t border-slate-50">
                                 <div className="flex items-center gap-3 text-slate-500 text-[10px] font-black uppercase tracking-widest">
-                                    <LucideIcons.Calendar size={14} className="text-blue-500" />
+                                    <Calendar size={14} className="text-blue-500" />
                                     Deadline: {s.deadline}
                                 </div>
                                 <button className="w-full py-4 bg-slate-50 text-blue-600 font-black rounded-2xl hover:bg-blue-600 hover:text-white transition-all flex items-center justify-center gap-2 text-xs uppercase tracking-widest">
                                     Apply Now
-                                    <LucideIcons.ExternalLink size={14} />
+                                    <ExternalLink size={14} />
                                 </button>
                             </div>
                         </div>
@@ -129,7 +129,7 @@ const ScholarshipFinder = () => {
 
                 {filteredScholarships.length === 0 && (
                     <div className="text-center py-20 bg-white rounded-[3rem] border-4 border-dashed border-slate-50">
-                        <LucideIcons.GraduationCap size={80} className="mx-auto text-slate-100 mb-6" />
+                        <GraduationCap size={80} className="mx-auto text-slate-100 mb-6" />
                         <h2 className="text-2xl font-bold text-slate-300">No Scholarships Match Your Criteria</h2>
                     </div>
                 )}

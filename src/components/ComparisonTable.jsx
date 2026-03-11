@@ -1,5 +1,4 @@
 import React from 'react';
-import * as LucideIcons from 'lucide-react';
 
 const ComparisonTable = ({ careers }) => {
     if (!careers || careers.length === 0) return null;

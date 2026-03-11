@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import * as LucideIcons from 'lucide-react';
+import { User, MapPin, ShieldCheck, Rocket } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 const StudentProfile = () => {
@@ -31,12 +31,12 @@ const StudentProfile = () => {
                 <div className="bg-gradient-to-r from-blue-600 to-indigo-700 p-10 text-white relative">
                     <div className="relative z-10">
                         <h2 className="text-3xl font-extrabold flex items-center gap-3 uppercase tracking-tighter">
-                            <LucideIcons.User size={32} />
+                            <User size={32} />
                             {t('profile')}
                         </h2>
                         <p className="text-blue-100 mt-2 text-lg font-medium opacity-80">Your journey to a dream career starts with a profile.</p>
                     </div>
-                    <LucideIcons.Rocket className="absolute right-[-20px] top-[-20px] text-white opacity-10" size={150} />
+                    <Rocket className="absolute right-[-20px] top-[-20px] text-white opacity-10" size={150} />
                 </div>
 
                 <form onSubmit={handleSubmit} className="p-10 space-y-8">
@@ -77,7 +77,7 @@ const StudentProfile = () => {
                         <div className="space-y-3">
                             <label className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] ml-1">Location</label>
                             <div className="relative">
-                                <LucideIcons.MapPin className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={20} />
+                                <MapPin className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={20} />
                                 <input
                                     required
                                     type="text"
@@ -129,7 +129,7 @@ const StudentProfile = () => {
                             type="submit"
                             className="w-full bg-blue-600 hover:bg-blue-700 text-white font-extrabold py-5 rounded-[1.5rem] shadow-2xl shadow-blue-200 transition-all transform hover:-translate-y-1 active:scale-95 flex items-center justify-center gap-2 text-lg uppercase tracking-widest"
                         >
-                            <LucideIcons.ShieldCheck />
+                            <ShieldCheck />
                             {t('saveProfile')}
                         </button>
                         <p className="text-center text-slate-300 text-[10px] mt-6 font-black uppercase tracking-[0.2em]">Safe & Local Data Storage</p>

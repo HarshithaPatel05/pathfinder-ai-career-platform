@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import ComparisonTable from '../components/ComparisonTable';
 import { careers } from '../data/careers';
-import * as LucideIcons from 'lucide-react';
+import { Layers, X } from 'lucide-react';
 
 const CareerComparison = () => {
     const [selectedCareers, setSelectedCareers] = useState([]);
@@ -31,7 +31,7 @@ const CareerComparison = () => {
             <main className="flex-1 max-w-7xl mx-auto w-full px-4 py-12">
                 <div className="mb-10 text-center">
                     <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-[10px] font-black uppercase tracking-widest mb-4">
-                        <LucideIcons.Layers size={14} />
+                        <Layers size={14} />
                         Career Comparison
                     </div>
                     <h1 className="text-4xl md:text-5xl font-black text-slate-800 tracking-tight leading-none mb-4">
@@ -59,7 +59,7 @@ const CareerComparison = () => {
                                         onClick={() => handleRemove(sc.id)}
                                         className="p-1 hover:bg-blue-200 rounded-lg transition-colors text-blue-600"
                                     >
-                                        <LucideIcons.X size={16} />
+                                        <X size={16} />
                                     </button>
                                 </div>
                             ))}

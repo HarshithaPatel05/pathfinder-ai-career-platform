@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
-import * as LucideIcons from 'lucide-react';
+import { Star, Sparkles, GraduationCap, BookOpen, Share2, Compass, Users, ChevronRight } from 'lucide-react';
 
 const RoleDashboard = () => {
     const { roleId } = useParams();
@@ -40,7 +40,7 @@ const RoleDashboard = () => {
                     <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-12">
                         <div className="max-w-2xl">
                             <div className="inline-flex items-center gap-2 px-3 py-1 bg-indigo-50 text-indigo-700 rounded-full text-[10px] font-black uppercase tracking-widest mb-6 border border-indigo-100">
-                                <LucideIcons.Star size={12} />
+                                <Star size={12} />
                                 Multi-Role Platform
                             </div>
                             <h1 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight mb-6">{data.title}</h1>
@@ -50,7 +50,7 @@ const RoleDashboard = () => {
                                 {data.actions.map((action, idx) => (
                                     <div key={idx} className="flex items-center gap-3 p-5 bg-slate-50 rounded-2xl border border-slate-100 hover:border-blue-500 hover:bg-white hover:shadow-xl transition-all cursor-pointer group/item">
                                         <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center text-blue-600 shadow-sm group-hover/item:bg-blue-600 group-hover/item:text-white transition-all">
-                                            <LucideIcons.Sparkles size={18} />
+                                            <Sparkles size={18} />
                                         </div>
                                         <span className="font-bold text-slate-800 text-sm">{action}</span>
                                     </div>
@@ -59,8 +59,8 @@ const RoleDashboard = () => {
                         </div>
 
                         <div className="hidden lg:block w-72 h-72 bg-gradient-to-br from-indigo-100 to-blue-50 rounded-full relative animate-pulse flex items-center justify-center">
-                            <LucideIcons.Compass size={120} className="text-indigo-400 opacity-20" />
-                            <LucideIcons.Users size={80} className="absolute text-indigo-600" />
+                            <Compass size={120} className="text-indigo-400 opacity-20" />
+                            <Users size={80} className="absolute text-indigo-600" />
                         </div>
                     </div>
                     {/* Decorative Blobs */}
@@ -69,19 +69,19 @@ const RoleDashboard = () => {
 
                 <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
                     <RoleFeatureCard
-                        icon={<LucideIcons.GraduationCap className="text-blue-600" size={32} />}
+                        icon={<GraduationCap className="text-blue-600" size={32} />}
                         title="Comprehensive Guidance"
                         desc="Access the same vertical roadmaps used by students to stay informed."
                         onClick={() => navigate('/explorer')}
                     />
                     <RoleFeatureCard
-                        icon={<LucideIcons.BookOpen className="text-purple-600" size={32} />}
+                        icon={<BookOpen className="text-purple-600" size={32} />}
                         title="Skill Resources"
                         desc="Learn what modern industries demand from new candidates."
                         onClick={() => navigate('/chat')}
                     />
                     <RoleFeatureCard
-                        icon={<LucideIcons.Share2 className="text-indigo-600" size={32} />}
+                        icon={<Share2 className="text-indigo-600" size={32} />}
                         title="Community Forum"
                         desc="Connect with other {roleId}s and share best practices."
                         onClick={() => navigate('/forum')}

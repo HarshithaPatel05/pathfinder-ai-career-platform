@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import * as LucideIcons from 'lucide-react';
+import { Sparkles, ArrowRight, Briefcase, Layers, BookOpen, ChartBar, Users, TrendingUp, Compass } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 const LandingPage = () => {
@@ -16,7 +16,7 @@ const LandingPage = () => {
 
             <main className="max-w-7xl mx-auto px-6 py-20 flex flex-col items-center text-center">
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-white text-blue-600 rounded-full shadow-md text-sm font-extrabold uppercase tracking-widest mb-10 border border-blue-50">
-                    <LucideIcons.Sparkles size={16} />
+                    <Sparkles size={16} />
                     {t('tagline')}
                 </div>
 
@@ -37,7 +37,7 @@ const LandingPage = () => {
                         className="px-12 py-6 bg-blue-600 text-white font-extrabold rounded-[2rem] text-xl transform transition-all hover:scale-105 hover:bg-blue-700 shadow-2xl shadow-blue-200 flex items-center gap-3 active:scale-95"
                     >
                         {t('getStarted')}
-                        <LucideIcons.ArrowRight />
+                        <ArrowRight />
                     </button>
                     <button
                         onClick={() => navigate('/explorer')}
@@ -49,17 +49,17 @@ const LandingPage = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-10 w-full">
                     <FeatureCard
-                        icon={<LucideIcons.Briefcase className="text-blue-500" size={32} />}
+                        icon={<Briefcase className="text-blue-500" size={32} />}
                         title="Interactive Flow"
                         desc="Visualize your entire career timeline from degree to senior management with our dynamic path graph."
                     />
                     <FeatureCard
-                        icon={<LucideIcons.Layers className="text-indigo-500" size={32} />}
+                        icon={<Layers className="text-indigo-500" size={32} />}
                         title="Side-by-Side Comparison"
                         desc="Confused between two paths? Compare salary, growth, and requirements side-by-side instantly."
                     />
                     <FeatureCard
-                        icon={<LucideIcons.BookOpen className="text-blue-500" size={32} />}
+                        icon={<BookOpen className="text-blue-500" size={32} />}
                         title={t('aiMentor')}
                         desc="Get instant advice and clarity about entrance exams, colleges, or skill-sets from our smart AI."
                     />
@@ -69,7 +69,7 @@ const LandingPage = () => {
                 <div className="mt-32 w-full max-w-6xl">
                     <div className="text-center mb-12">
                         <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-[10px] font-black uppercase tracking-widest mb-4">
-                            <LucideIcons.ChartBar size={14} />
+                            <ChartBar size={14} />
                             Platform Insights
                         </div>
                         <h2 className="text-4xl font-black text-slate-800 tracking-tight">Real-Time Career Statistics</h2>
@@ -80,7 +80,7 @@ const LandingPage = () => {
                         {/* Total Careers */}
                         <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 flex flex-col items-center justify-center text-center">
                             <div className="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-4">
-                                <LucideIcons.Layers size={32} />
+                                <Layers size={32} />
                             </div>
                             <h4 className="text-5xl font-black text-slate-800 mb-2">120+</h4>
                             <p className="text-sm font-bold text-slate-500 uppercase tracking-widest">Available Careers</p>
@@ -89,7 +89,7 @@ const LandingPage = () => {
                         {/* Most Popular */}
                         <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 flex flex-col items-center justify-center text-center">
                             <div className="w-16 h-16 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center mb-4">
-                                <LucideIcons.Users size={32} />
+                                <Users size={32} />
                             </div>
                             <h4 className="text-2xl font-black text-slate-800 mb-2">Software Engineer & Doctor</h4>
                             <p className="text-sm font-bold text-slate-500 uppercase tracking-widest mt-2">Most Popular Tracks</p>
@@ -98,7 +98,7 @@ const LandingPage = () => {
                         {/* Trending Skills */}
                         <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 flex flex-col items-center justify-center text-center">
                             <div className="w-16 h-16 bg-orange-50 text-orange-600 rounded-2xl flex items-center justify-center mb-4">
-                                <LucideIcons.TrendingUp size={32} />
+                                <TrendingUp size={32} />
                             </div>
                             <div className="flex flex-wrap gap-2 justify-center mb-2">
                                 <span className="bg-slate-100 text-slate-600 font-bold px-3 py-1 rounded-full text-xs">AI/ML</span>
@@ -113,7 +113,7 @@ const LandingPage = () => {
 
             {/* Footer Branding */}
             <footer className="mt-auto py-12 text-slate-400 font-bold uppercase tracking-[0.3em] text-[10px] flex items-center gap-4">
-                <LucideIcons.Compass size={14} />
+                <Compass size={14} />
                 PathFinder AI — Build the Future
             </footer>
         </div>

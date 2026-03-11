@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import * as LucideIcons from 'lucide-react';
+import { Compass, Briefcase, Target, Layers, BookOpen, GraduationCap, MessageSquare, Globe, Home } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 const Navbar = () => {
@@ -15,7 +15,7 @@ const Navbar = () => {
                     className="flex items-center gap-2 cursor-pointer"
                 >
                     <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white shadow-blue-200 shadow-lg">
-                        <LucideIcons.Compass size={24} />
+                        <Compass size={24} />
                     </div>
                     <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-indigo-700 hidden sm:block">
                         PathFinder AI
@@ -23,17 +23,17 @@ const Navbar = () => {
                 </div>
 
                 <div className="hidden lg:flex flex-wrap items-center gap-4">
-                    <NavLink to="/explorer" icon={<LucideIcons.Briefcase size={16} />} label={t('exploreCareers')} />
-                    <NavLink to="/recommend" icon={<LucideIcons.Target size={16} />} label="AI Match" />
-                    <NavLink to="/compare" icon={<LucideIcons.Layers size={16} />} label="Compare" />
-                    <NavLink to="/skills" icon={<LucideIcons.BookOpen size={16} />} label="Skills" />
-                    <NavLink to="/scholarships" icon={<LucideIcons.GraduationCap size={16} />} label={t('scholarships')} />
-                    <NavLink to="/chat" icon={<LucideIcons.MessageSquare size={16} />} label={t('aiMentor')} />
+                    <NavLink to="/explorer" icon={<Briefcase size={16} />} label={t('exploreCareers')} />
+                    <NavLink to="/recommend" icon={<Target size={16} />} label="AI Match" />
+                    <NavLink to="/compare" icon={<Layers size={16} />} label="Compare" />
+                    <NavLink to="/skills" icon={<BookOpen size={16} />} label="Skills" />
+                    <NavLink to="/scholarships" icon={<GraduationCap size={16} />} label={t('scholarships')} />
+                    <NavLink to="/chat" icon={<MessageSquare size={16} />} label={t('aiMentor')} />
                 </div>
 
                 <div className="flex items-center gap-4">
                     <div className="flex bg-slate-100 p-1 rounded-xl items-center">
-                        <LucideIcons.Globe className="mx-2 text-slate-400" size={16} />
+                        <Globe className="mx-2 text-slate-400" size={16} />
                         <div className="flex gap-1">
                             <LanguageBtn lang="en" current={language} setLang={setLanguage} label="EN" />
                             <LanguageBtn lang="hi" current={language} setLang={setLanguage} label="हिन्दी" />
@@ -46,7 +46,7 @@ const Navbar = () => {
                         className="p-2 text-slate-500 hover:bg-slate-50 rounded-lg"
                         title={t('dashboard')}
                     >
-                        <LucideIcons.Home size={20} />
+                        <Home size={20} />
                     </button>
                 </div>
             </div>

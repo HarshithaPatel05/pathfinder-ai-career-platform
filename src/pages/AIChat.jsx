@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import * as LucideIcons from 'lucide-react';
+import { Bot, User, Send, Compass, GraduationCap } from 'lucide-react';
 import ChatMessage from '../components/ChatMessage';
 import Navbar from '../components/Navbar';
 import { useLanguage } from '../context/LanguageContext';
@@ -112,7 +112,7 @@ Would you like me to link you to its full roadmap?`;
                         <div key={idx} className={`flex ${msg.isBot ? 'justify-start' : 'justify-end'} animate-in fade-in slide-in-from-bottom-5 duration-500`}>
                             <div className={`flex max-w-[85%] ${msg.isBot ? 'flex-row' : 'flex-row-reverse'}`}>
                                 <div className={`w-12 h-12 rounded-[1rem] flex items-center justify-center shrink-0 shadow-lg ${msg.isBot ? 'bg-indigo-600 text-white mr-4' : 'bg-blue-600 text-white ml-4'}`}>
-                                    {msg.isBot ? <LucideIcons.Bot size={24} /> : <LucideIcons.User size={24} />}
+                                    {msg.isBot ? <Bot size={24} /> : <User size={24} />}
                                 </div>
                                 <div className={`p-6 rounded-[2rem] shadow-sm border border-slate-100 ${msg.isBot ? 'bg-white text-slate-800 rounded-tl-none font-medium' : 'bg-blue-600 text-white rounded-tr-none shadow-xl shadow-blue-900/10 font-bold'}`}>
                                     <p className="text-lg leading-relaxed">{msg.text}</p>
@@ -140,13 +140,13 @@ Would you like me to link you to its full roadmap?`;
                             disabled={!input.trim()}
                             className="absolute right-3 top-3 bottom-3 w-14 bg-indigo-600 text-white rounded-2xl flex items-center justify-center transition-all disabled:opacity-50 hover:bg-indigo-700 shadow-xl shadow-indigo-200 active:scale-95"
                         >
-                            <LucideIcons.Send size={24} />
+                            <Send size={24} />
                         </button>
                     </div>
 
                     <div className="flex items-center gap-3 overflow-x-auto pb-2 scrollbar-hide md:max-w-[40%]">
-                        <QuickAction label={t('careerRoadmap')} icon={<LucideIcons.Compass size={14} />} onClick={() => navigate('/explorer')} />
-                        <QuickAction label={t('scholarships')} icon={<LucideIcons.GraduationCap size={14} />} onClick={() => navigate('/scholarships')} />
+                        <QuickAction label={t('careerRoadmap')} icon={<Compass size={14} />} onClick={() => navigate('/explorer')} />
+                        <QuickAction label={t('scholarships')} icon={<GraduationCap size={14} />} onClick={() => navigate('/scholarships')} />
                     </div>
                 </div>
             </footer>

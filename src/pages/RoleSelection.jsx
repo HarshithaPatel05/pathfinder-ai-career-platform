@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as LucideIcons from 'lucide-react';
+import { User } from 'lucide-react';
 import RoleCard from '../components/RoleCard';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -30,8 +31,8 @@ const RoleSelection = () => {
         <div className="min-h-screen bg-slate-50 flex flex-col items-center py-20 px-6">
             <div className="max-w-7xl w-full">
                 <div className="flex flex-col items-center text-center mb-16 px-6">
-                    <div className="p-3 bg-blue-100 text-blue-600 rounded-[1.5rem] mb-6 shadow-sm">
-                        <LucideIcons.User size={32} />
+                    <div className="w-20 h-20 bg-gradient-to-br from-blue-600 to-indigo-700 text-white rounded-[2rem] flex items-center justify-center shadow-2xl shadow-blue-200">
+                        <User size={32} />
                     </div>
                     <h2 className="text-4xl md:text-6xl font-black text-slate-800 leading-tight tracking-tight mb-4">
                         {t('selectRole')}

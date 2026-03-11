@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import * as LucideIcons from 'lucide-react';
+import { CheckCircle2, UserCheck } from 'lucide-react';
 
 const ProgressTracker = ({ careerId, roadmap }) => {
     const [progress, setProgress] = useState([]);
@@ -30,7 +30,7 @@ const ProgressTracker = ({ careerId, roadmap }) => {
                 <div className="flex-1">
                     <div className="flex justify-between items-center mb-3">
                         <span className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] flex items-center gap-2">
-                            <LucideIcons.CheckCircle2 size={14} className="text-emerald-500" />
+                            <CheckCircle2 size={14} className="text-emerald-500" />
                             Roadmap Progress
                         </span>
                         <span className="text-lg font-black text-slate-800">{progressPercentage}%</span>
@@ -61,7 +61,7 @@ const ProgressTracker = ({ careerId, roadmap }) => {
                                 aria-label={isCompleted ? "Mark as incomplete" : "Mark as complete"}
                             >
                                 {isCompleted ? (
-                                    <LucideIcons.CheckCircle2 size={28} className="text-emerald-500" />
+                                    <CheckCircle2 size={28} className="text-emerald-500" />
                                 ) : (
                                     <span className="text-lg md:text-xl font-black text-blue-600">{index + 1}</span>
                                 )}
@@ -73,7 +73,7 @@ const ProgressTracker = ({ careerId, roadmap }) => {
                                 : 'bg-white border-slate-100 group-hover:shadow-2xl group-hover:shadow-indigo-900/5 group-hover:border-blue-100'
                                 }`} onClick={() => toggleStep(index)}>
                                 <div className={`absolute top-[-10px] right-[-10px] p-10 opacity-10 transition-all ${isCompleted ? 'text-emerald-600 opacity-5' : 'text-slate-50 group-hover:text-blue-600 group-hover:opacity-10'}`}>
-                                    <LucideIcons.UserCheck size={120} />
+                                    <UserCheck size={120} />
                                 </div>
                                 <div className="flex-1 relative z-10">
                                     <div className="flex items-center justify-between mb-4">

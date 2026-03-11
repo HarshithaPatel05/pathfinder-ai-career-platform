@@ -1,11 +1,12 @@
 import React from "react";
 import * as LucideIcons from "lucide-react";
+import { Briefcase } from "lucide-react";
 
 const CareerCard = ({ career, onClick }) => {
     const Icon =
         LucideIcons[career.icon] !== undefined
             ? LucideIcons[career.icon]
-            : LucideIcons.Briefcase;
+            : Briefcase;
 
     return (
         <div
